@@ -9,6 +9,7 @@ set -euo pipefail
 # each agent harness:
 #   - ~/.claude/skills: Claude Code
 #   - ~/.agents/skills: Codex and other Agent Skills-compatible harnesses
+#   - Hermes Agent: registers via scripts/setup-hermes.py (skills.external_dirs)
 # Each entry is a symlink into this repo, so a `git pull` is all that's needed
 # to keep installed skills up to date.
 
@@ -60,3 +61,14 @@ for DEST in "${DESTS[@]}"; do
     echo "linked $name -> $src ($DEST)"
   done
 done
+
+# If python is available and Hermes config is present, configure Hermes as well
+if command -v python3 >/dev/null 2>&1 || command -v python >/dev/null 2>&1; then
+  PY_BIN="$(command -v python3 2>/dev/null || command -v python 2>/dev/null)"
+  if [ -f "$REPO/scripts/setup-hermes.py" ]; then
+    echo ""
+    echo "Configuring Hermes Agent skills..."
+    "$PY_BIN" "$REPO/scripts/setup-hermes.py" || true
+  fi
+fi
+
