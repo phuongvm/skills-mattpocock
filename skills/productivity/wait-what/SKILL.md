@@ -1,6 +1,6 @@
 ---
 name: wait-what
-description: "Stop. That last message did not land: re-pitch it."
+description: "Write unclear last reply in STE100 with GLOSSARY.md terms"
 disable-model-invocation: true
 ---
 

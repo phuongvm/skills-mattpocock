@@ -1,6 +1,6 @@
 ---
 name: teach
-description: Teach the user a new skill or concept, within this workspace.
+description: "Create stateful HTML lessons to teach a new skill or topic"
 disable-model-invocation: true
 argument-hint: "What would you like to learn about?"
 ---

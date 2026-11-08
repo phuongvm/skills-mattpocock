@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff
-description: Pursue a long-running goal in a single session by co-ordinating subagents.
+description: "Plan and run long-running goals via subagents and a wiki"
 disable-model-invocation: true
 ---
 

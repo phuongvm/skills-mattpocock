@@ -1,6 +1,6 @@
 ---
 name: triage
-description: Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.
+description: "Triage issues and PRs, assign roles, and write agent briefs"
 disable-model-invocation: true
 ---
 
